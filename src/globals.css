@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-core-gray-00: #FFFFFF;
+  --color-core-gray-300: #C9C9CE;
+  --color-core-gray-500: #8C8C9A;
+  --color-core-gray-950: #2C2C31;
+
+  --color-core-red-100: #FFDCDC;
+  --color-core-red-600: #DC2828;
+  
+  --color-core-yellow-100: #FAF1B6;
+  --color-core-yellow-700: #A56315;
+
+  --color-core-alpha-dim-50: rgba(26, 26, 26, 0.06);
+  --color-core-alpha-dim-800: rgba(26, 26, 26, 0.8);
+
+  --color-o2-blue-500: #0050FF;
+
+  --color-surface-x-high: var(--color-core-gray-500);
+  --color-surface-x-low: var(--color-core-gray-00);
+  --color-surface-brand: var(--color-o2-blue-500);
+  --color-surface-danger: var(--color-core-red-600);
+  --color-surface-danger-variant: var(--color-core-red-100);
+  --color-surface-warning: var(--color-core-yellow-700);
+  --color-surface-warning-variant: var(--color-core-yellow-100);
+
+  --color-content-xx-high: var(--color-core-gray-950);
+  --color-content-medium: var(--color-core-gray-500);
+  --color-content-low: var(--color-core-gray-300);
+  --color-content-danger: var(--color-core-red-600);
+  --color-content-warning: var(--color-core-yellow-700);
+
+  --color-state-hover: var(--color-core-alpha-dim-50);
+  --color-state-focus: var(--color-core-alpha-dim-800);
+
+  --background: var(--color-core-gray-00);
+  --foreground: var(--color-core-gray-950);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--color-core-gray-950);
+    --foreground: var(--color-core-gray-300);
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
