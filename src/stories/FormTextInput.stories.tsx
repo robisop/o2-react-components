@@ -37,7 +37,7 @@ const FormTextInputWrapper = (props: {
 };
 
 const meta = {
-  title: "Example/FormTextInput",
+  title: "O2 Components/FormTextInput",
   component: FormTextInput,
   decorators: [
     (Story) => (
