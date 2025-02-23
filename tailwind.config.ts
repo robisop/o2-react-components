@@ -74,6 +74,33 @@ export default {
       fontFamily: {
         sans: ["var(--font-on-air-var)"],
       },
+      fontSize: {
+        sm: "0.875rem",
+        base: "1rem",
+      },
+      fontWeight: {
+        normal: "400",
+        medium: "500",
+        semibold: "550",
+        bold: "700",
+      },
+      lineHeight: {
+        "label-s": "17px",
+        normal: "1.375",
+      },
+      letterSpacing: {
+        tight: "0.01px",
+        normal: "0.16px",
+      },
+      spacing: {
+        xxs: "6px",
+        xs: "8px",
+        sm: "12px",
+        md: "16px",
+        lg: "20px",
+        xl: "24px",
+        "5xl": "48px",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
