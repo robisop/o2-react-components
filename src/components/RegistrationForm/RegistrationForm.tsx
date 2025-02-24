@@ -1,15 +1,13 @@
 "use client";
 
+import { Form } from "@/components/ui/form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-
-import { Form } from "@/components/ui/form";
-import { toast } from "@/hooks/use-toast";
 import { FormTextInput } from "../FormTextInput/FormTextInput";
 import { Button } from "../ui/button";
 
-const FormSchema = z.object({
+const RegistrationFormSchema = z.object({
   firstName: z
     .string()
     .min(2, {
@@ -25,20 +23,15 @@ const FormSchema = z.object({
   email: z.string().email("Invalid email address"),
 });
 
-const onSubmit = (data: z.infer<typeof FormSchema>) => {
-  toast({
-    title: "You submitted the following values:",
-    description: (
-      <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-        <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-      </pre>
-    ),
-  });
-};
+export type RegistrationFormSchemaType = z.infer<typeof RegistrationFormSchema>;
 
-export const RegistrationForm = () => {
-  const form = useForm<z.infer<typeof FormSchema>>({
-    resolver: zodResolver(FormSchema),
+interface RegistrationFormProps {
+  onSubmit: (data: RegistrationFormSchemaType) => void;
+}
+
+export const RegistrationForm = ({ onSubmit }: RegistrationFormProps) => {
+  const form = useForm<RegistrationFormSchemaType>({
+    resolver: zodResolver(RegistrationFormSchema),
     defaultValues: {
       firstName: "",
       lastName: "",
@@ -48,7 +41,11 @@ export const RegistrationForm = () => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form
+        name="registration"
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-6"
+      >
         <FormTextInput
           control={form.control}
           fieldName="firstName"
