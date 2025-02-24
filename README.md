@@ -1,9 +1,13 @@
 # O2 React Components
 
 This is sample project for O2 React Components Library. It is built as a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
 [`shadcn/ui`](https://ui.shadcn.com) components are used as a base, providing good component structure and accessibility.
+
 [`tailwindcss`](https://tailwindcss.com) is used as a styling framework, providing rich base of utility css classes and good configurability.
+
 [`Storybook`](https://storybook.js.org) is used to provide an interactive documentation for the components.
+
 [`Jest`](https://jestjs.io) is used for unit testing.
 
 ## Getting Started
