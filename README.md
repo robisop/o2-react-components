@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# O2 React Components
+
+This is sample project for O2 React Components Library. It is built as a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+[`shadcn/ui`](https://ui.shadcn.com) components are used as a base, providing good component structure and accessibility.
+[`tailwindcss`](https://tailwindcss.com) is used as a styling framework, providing rich base of utility css classes and good configurability.
+[`Storybook`](https://storybook.js.org) is used to provide an interactive documentation for the components.
+[`Jest`](https://jestjs.io) is used for unit testing.
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Next.js
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Run the next.js development server:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [On Air Var](https://www.monotype.com/fonts/o2-on-air), a new font family for O2.
+```bash
+yarn dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the Text Input Form Example.
 
-To learn more about Next.js, take a look at the following resources:
+## Storybook
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Run the Storybook:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+yarn storybook
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open [http://localhost:6006](http://localhost:6006) with your browser to see the Storybook.
